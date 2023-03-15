@@ -4,26 +4,23 @@ profile_picture:
   src: /assets/img/scaled_mypic.jpeg
   alt: website picture
 ---
-<p>
-  Welcome! This site serves as an example for the Bay Jekyll theme. Bay is a very simple and minimal theme, directly inspired by Dan Grover's <a href="http://dangrover.com">website</a>.
-</p>
+I am a Ph.D. student in Graduate School of Data Science at Seoul National University with my advisor [Prof. Sanghack Lee](https://www.sanghacklee.me/). <br>
+<br>
+I studied Computer Science & Engineering for my B.S. and M.S. degree. My research field was Human Computer Interaction based on deep learning model. Nowadays I have been focusing on studying Machine Learning and Reinforcement Learning through a Causal Lens since I studied causal inference.   
 
 ## Research Interests <br>
 Causal Inference, Causal Machine Learning, Causal Reinforcement Learning <br>
 
-## Education
-Ph.D. in Graduate School of Data Science, Seoul National University (2020 ~) <br> *- Advisee of [Sanghack Lee](https://www.sanghacklee.me/) @ Causality Lab, GSDS,*
-<br>
-M.S. in Computer Science & Engineering, Yonsei University (2019)
-<br>
-B.S. in Computer Science & Engineering, Soongsil University (2017)
-<br>
+## Publications <br>
+- Kwon, Y. H., Shin, S. B., & Kim, S. D. (2018). _Electroencephalography based fusion two-dimensional (2D)-convolution neural networks (CNN) model for emotion recognition system._ Sensors, 18(5), 1383.
+- Kwon, Y., Nan, Y., & Kim, S. D. (2017). _Transformation of EEG Signal for Emotion Analysis and Dataset Construction for DNN Learning._ In Advances in Computer Science and Ubiquitous Computing (pp. 96-101). Springer, Singapore.
+
 
 *** 
-E-mail: dataofyou@snu.ac.kr<br>
+E-mail: dataofyou@snu.ac.kr <br>
 Google Scholar: [link](https://scholar.google.co.kr/citations?user=6cD_BKEAAAAJ&hl=ko)  <br>
 Github: [link](https://github.com/Deepstroy/resume) <br>
-Curriculum Vitae: Coming soon..<br>
+Curriculum Vitae: Coming soon.. <br>
 Contact Information: Bldg #942, 1 Gwanak-ro, Gwanak-gu, Seoul, 08826, South Korea;
 
 
