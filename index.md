@@ -6,7 +6,7 @@ profile_picture:
 ---
 I am a Ph.D. student in Graduate School of Data Science at Seoul National University with my advisor [Prof. Sanghack Lee](https://www.sanghacklee.me/). <br>
 <br>
-I studied Computer Science & Engineering for my B.S. and M.S. degrees. My research field was Human Computer Interaction based on deep learning model. Nowadays, I have been focusing on studying Machine Learning and Reinforcement Learning through a **<span style='background-color: #dcffe4'>Causal Lens</span>**.   
+I studied Computer Science & Engineering for my B.S. and M.S. degrees. My research field was Human Computer Interaction based on deep learning model. Nowadays, I have been focusing on studying Machine Learning and Reinforcement Learning through a **Causal Lens**.   
 
 ## Research Interests <br>
 Causal Inference, Causal Machine Learning, Causal Reinforcement Learning <br>
