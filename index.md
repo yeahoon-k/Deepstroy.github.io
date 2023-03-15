@@ -4,6 +4,9 @@ profile_picture:
   src: /assets/img/scaled_mypic.jpeg
   alt: website picture
 ---
+<p>
+  Welcome! This site serves as an example for the Bay Jekyll theme. Bay is a very simple and minimal theme, directly inspired by Dan Grover's <a href="http://dangrover.com">website</a>.
+</p>
 
 ## Research Interests <br>
 Causal Inference, Causal Machine Learning, Causal Reinforcement Learning <br>
