@@ -21,6 +21,6 @@ E-mail: dataofyou@snu.ac.kr<br>
 Google Scholar: [link](https://scholar.google.co.kr/citations?user=6cD_BKEAAAAJ&hl=ko)  <br>
 Github: [link](https://github.com/Deepstroy/resume) <br>
 Curriculum Vitae: Coming soon..<br>
-Contact information: Bldg #942, 1 Gwanak-ro, Gwanak-gu, Seoul, 08826, South Korea;
+Contact Information: Bldg #942, 1 Gwanak-ro, Gwanak-gu, Seoul, 08826, South Korea;
 
 
