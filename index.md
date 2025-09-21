@@ -11,7 +11,15 @@ I studied Computer Science & Engineering for my B.S. and M.S. degrees. My resear
 ## Research Interests <br>
 Causal Inference, Causal Machine Learning, Causal Reinforcement Learning <br>
 
-## Publications <br>
+## Conferences <br> 
+(* for joint first authorship)
+- (NeurIPS 2025) **Y Kwon**, Y Chcoe, S Park, N Dhir*, S Lee*. **Non-Stationary Structural Causal Bandits**
+  (Accepted)
+- (ICML 2024) I Hwang, Y Choe, **Y Kwon**, S Lee. **On positivity condition for causal inference** <br>
+
+
+
+## Journals <br>
 - Kwon, Y. H., Shin, S. B., & Kim, S. D. (2018). _Electroencephalography based fusion two-dimensional (2D)-convolution neural networks (CNN) model for emotion recognition system._ Sensors, 18(5), 1383.
 - Kwon, Y., Nan, Y., & Kim, S. D. (2017). _Transformation of EEG Signal for Emotion Analysis and Dataset Construction for DNN Learning._ In Advances in Computer Science and Ubiquitous Computing (pp. 96-101). Springer, Singapore.
 
