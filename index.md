@@ -15,7 +15,7 @@ Causal Inference, Causal Machine Learning, Causal Reinforcement Learning <br>
 (* for joint first authorship)
 - (NeurIPS 2025) **Y Kwon**, Y Choe, S Park, N Dhir*, S Lee*. **Non-Stationary Structural Causal Bandits**
   (Accepted)
-- (ICML 2024) I Hwang, Y Choe, **Y Kwon**, S Lee. **On positivity condition for causal inference** <br>
+- (ICML 2024) I Hwang*, Y Choe*, **Y Kwon**, S Lee. **On positivity condition for causal inference** <br>
 
 
 
@@ -27,7 +27,7 @@ Causal Inference, Causal Machine Learning, Causal Reinforcement Learning <br>
 *** 
 E-mail: dataofyou@snu.ac.kr <br>
 Google Scholar: [link](https://scholar.google.co.kr/citations?user=6cD_BKEAAAAJ&hl=ko)  <br>
-Github: [link](https://github.com/yeahoon-k/resume) <br>
+Github: [link](https://github.com/yeahoon-k) <br>
 Curriculum Vitae: Coming soon.. <br>
 Contact Information: Bldg #942, 1 Gwanak-ro, Gwanak-gu, Seoul, 08826, South Korea;
 
