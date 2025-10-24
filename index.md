@@ -27,7 +27,7 @@ Causal Inference, Causal Machine Learning, Causal Reinforcement Learning <br>
 *** 
 E-mail: dataofyou@snu.ac.kr <br>
 Google Scholar: [link](https://scholar.google.co.kr/citations?user=6cD_BKEAAAAJ&hl=ko)  <br>
-Github: [link](https://github.com/Deepstroy/resume) <br>
+Github: [link](https://github.com/yeahoon-k/resume) <br>
 Curriculum Vitae: Coming soon.. <br>
 Contact Information: Bldg #942, 1 Gwanak-ro, Gwanak-gu, Seoul, 08826, South Korea;
 
