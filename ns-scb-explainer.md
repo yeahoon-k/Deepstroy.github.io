@@ -22,7 +22,6 @@ Classical SCM-based bandits assume a stationary environment: once you know the d
 - Experiments demonstrating **lower regret** and **higher optimal-action probability** than stationary or naive baselines when the environment shifts.
 
 ## Paper/resources
-- Paper PDF: (link)
-- Code: [(link)](https://github.com/yeahoon-k/NS-SCMMAB)
-- Poster/Slides: (optional link)
+- Paper PDF: [link](https://openreview.net/pdf?id=F4LhOqhxkk)
+- Code: [link](https://github.com/yeahoon-k/NS-SCMMAB)
 
