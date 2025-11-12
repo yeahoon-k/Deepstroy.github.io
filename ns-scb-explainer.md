@@ -31,8 +31,9 @@ P(Y\_t \mid \operatorname{do}(\mathbf{X}\_t{=}\mathbf{x}\_t), I\_{1:t-1}) \neq P
 Stationary SCM-MAB solutions are **myopic** here because they optimize $Y\_t$ in isolation and ignore cross-time information propagation.
 
 ### Example
+
 <p align="center">
-  <img src="{{ '/assets/img/example2.png' | relative_url }}" alt="causal diagrams with transition edges" width="600">
+  <img src="{{ '/assets/img/example1.png' | relative_url }}" alt="causal diagrams with transition edges" width="600">
   <em>Figure 2</em>
 </p>
 
