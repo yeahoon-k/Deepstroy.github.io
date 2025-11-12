@@ -36,9 +36,7 @@ This view separates **what changes** (reward distribution shift and effective in
 
 ## POMIS+ (temporal extension of POMIS)
 **POMIS** identifies **Possibly-Optimal Minimal Intervention Sets** for a single slice. **POMIS$^+$** extends this idea to time by selecting a sequence
-$$
-(\mathbf{X}_{t_1},\ \mathbf{X}_{t_2},\ \dots,\ \mathbf{X}_{t_k})
-$$
+$(\mathbf{X}_{t_1},\ \mathbf{X}_{t_2},\ \dots,\ \mathbf{X}_{t_k})$
 such that intervening on these sets at selected steps yields high expected future reward $ \mathbb{E}[Y_{t'}] $ for target times $ t'\ge t_k $.  
 Importantly, $ \mathbf{X}_t $ may include variables **irrelevant to $Y_t$** but **crucial for $Y_{t'}$** via **transition edges**.
 
