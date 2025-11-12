@@ -28,7 +28,7 @@ A reward distribution shift occurs when the conditional reward distribution chan
 \\[
 P(Y\_t \mid \operatorname{do}(\mathbf{X}\_t{=}\mathbf{x}\_t), I\_{1:t-1}) \neq P(Y\_{t'} \mid \operatorname{do}(\mathbf{X}\_{t'}{=}\mathbf{x}\_{t'}), I\_{1:t'-1})
 \\]
-Stationary SCM-MAB solutions are **myopic** here because they optimize $Y_t$ in isolation and ignore cross-time information propagation.
+Stationary SCM-MAB solutions are **myopic** here because they optimize $Y\_t$ in isolation and ignore cross-time information propagation.
 
 
 ## Temporal model view
@@ -57,9 +57,9 @@ To characterize non-myopic interventions on the time-expanded graph:
    A refinement of IB$^+$ that filters out nodes whose manipulation would be redundant given the temporal model (e.g., blocked by mediators or confounders). QIB retains only candidates that can change the distribution of ancestors of $Y\_{t'}$ that matter.
 
 The **POMIS$^+$ for $(t,t')$** is obtained by the **union**
-\[
+\\[
 \mathrm{POMIS}^{+}\_{t,t'} \;=\; \mathrm{IB}^{+}\_{t,t'}\big(G[\!\bigcup\_{i=t}^{t'} V\_i], Y\_{t'}\big)\; \cup\; \mathrm{QIB}\_t\big(G[V\_t], Y\_t\big).
-\]
+\\]
 Under the time-slice Markov assumption, it suffices to take $t'=t+1$ (i.e., look only one step ahead).
 
 ## Why stationary solutions fail
