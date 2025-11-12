@@ -75,18 +75,18 @@ If we widen the view to the rolled-out window $\mathcal{G}[V\_1 \cup V\_2]$, we 
 **Single slice (POMIS).**  
 At time $t$, we work on the in-slice graph $\mathcal{G}[V\_t]$ for the current reward $Y\_t$. We compute the in-slice interventional border $\operatorname{IB}(\mathcal{G}[V\_t], Y\_t)$. The resulting **POMIS** at slice $t$ is the family of admissible manipulative sets for $Y\_t$ determined by these IB computations.
 
-**Cross-time objects (IB$^+$ and QIB).**  
+**Graphical tools (IB$^+$ and QIB).**  
 To plan non-myopically toward a future reward $Y\_{t'}$ ($t' > t$), we read the temporal models on the time-expanded diagram:
 - **IB$^+$ at $t$ toward $t'$** selects the **time-$t$ variables that still have leverage on $Y\_{t'}$ through transition edges** in the rolled-out window. We denote this set by $\mathrm{IB}^{+}\_{t,t'}$.
 - **QIB at $t$** keeps the **current-time handles that remain interventional borders for $Y\_t$** (under the qualification conditions in the paper). We denote this set by $\mathrm{QIB}\_t$.
 
 **Composition (definition of POMIS$^+$).**  
 For a given pair $(t,t')$, the **POMIS$^+$** is defined by the **union** of the two graphical objects:
-$$
+\\[
 \mathrm{POMIS}^{+}\_{t,t'} \;=\; \mathrm{IB}^{+}\_{t,t'}\!\big(\mathcal{G}[\!\!\bigcup\_{i=t}^{t'} V\_i],\, Y\_{t'}\big)
 \;\cup\;
 \mathrm{QIB}\_t\!\big(\mathcal{G}[V\_t],\, Y\_t\big).
-$$
+\\]
 Under the time-slice Markov assumption used in the paper, it suffices to take $t' \!=\! t{+}1$.
 
 **How it’s used (sequence construction).**  
