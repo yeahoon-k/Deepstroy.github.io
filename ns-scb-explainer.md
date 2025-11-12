@@ -58,7 +58,7 @@ Putting these together, the admissible manipulative sets for $Y\_1$ at time $t{=
 
 **However**, 
 <p align="center">
-  <img src="{{ '/assets/img/example2.png' | relative_url }}" alt="causal diagrams with transition edges" width="300">
+  <img src="{{ '/assets/img/example2.png' | relative_url }}" alt="causal diagrams with transition edges" width="210">
   <em>Figure 2</em>
 </p>
 
