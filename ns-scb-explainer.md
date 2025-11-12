@@ -6,13 +6,12 @@ permalink: /ns-scb-explainer/
 {% include mathjax.html %}
 
 # Non-Stationary Structural Causal Bandits
----
 
 ## Background
 In a stationary world, the agent uses the causal diagram to pick a manipulative set and pull an arm that excludes irrelevant variables and targets the drivers of the reward. This works when the environment is fixed.
 
 <p align="center">
-  <img src="{{ '/assets/img/s_and_ns1.png' | relative_url }}" alt="causal diagrams with transition edges" width="720">
+  <img src="{{ '/assets/img/s_and_ns1.png' | relative_url }}" alt="causal diagrams with transition edges" width="400">
 </p>
 
 
