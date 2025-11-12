@@ -62,7 +62,7 @@ Given the time slice $\mathcal{G}[V\_2]$, the agent obtains the same in-slice fa
 \mathrm{POMIS}\_2 = \lbrace \varnothing, \lbrace Z\_2 \rbrace \rbrace.
 \\]
 However, when the agent chooses the **empty set** at $t{=}2$, the **temporal model** it actually faces is
-$ \mathcal{M}\_2 \mid X\_1{=}x\_1$.
+$ \mathcal{M}\_2 \mid \mathbf{v}\_2^\star{=}x\_1$.
 The model **reflects** the influence of a past value at $t{=}1$. Under this conditioning, the **local** POMIS on $\mathcal{G}[V\_2]$ **does not guarantee optimality** for $Y\_2$: the reward at $t{=}2$ can still depend on the prior assignment at $t{=}1$.
 <p align="center">
   <img src="{{ '/assets/img/example2.png' | relative_url }}" alt="causal diagrams with transition edges" width="160">
