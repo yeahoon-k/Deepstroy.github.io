@@ -31,7 +31,7 @@ P(Y\_t \mid \operatorname{do}(\mathbf{X}\_t{=}\mathbf{x}\_t), I\_{1:t-1}) \neq P
 Stationary SCM-MAB solutions are **myopic** here because they optimize $Y\_t$ in isolation and ignore cross-time information propagation.
 
 ### Example
-Under the time-slice graph \( \mathcal{G}[V\_1] \), the agent first computes the **MUCT** around the current reward \(Y\_1\).  
+Under the time-slice graph $\mathcal{G}[V\_1]$, the agent first computes the **MUCT** around the current reward \(Y\_1\).  
 Because both \(X\_1\) and \(Z\_1\) lie on upstream paths that reach \(Y\_1\), the minimal upstream carrier at \(t{=}1\) is \( \{X\_1, Z\_1, Y\_1\} \).  
 Given this MUCT, the **in-slice interventional border (IB)** for \(Y\_1\) is **empty**—there is no strictly smaller parental frontier that must be manipulated at this slice. Formally:
 \\[
