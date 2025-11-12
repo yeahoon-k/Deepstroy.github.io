@@ -56,11 +56,23 @@ Putting these together, the admissible manipulative sets for $Y\_1$ at time $t{=
 \mathrm{POMIS}\_1=\lbrace \varnothing, \lbrace Z\_1 \rbrace \rbrace
 \\]
 
-**However**, 
+Next, suppose the agent computes **POMIS** at time $t{=}2$.  
+Given the time slice $\mathcal{G}[V\_2]$, the agent obtains the same in-slice family as at $t{=}1$:
+$$
+\mathrm{POMIS}\_2(Y\_2)\;=\;\left\{\;\varnothing,\;\{Z\_2\}\;\right\}.
+$$
+However, if the agent chooses the **empty set** (no intervention) at $t{=}2$, the **temporal model** it actually faces is
+$$
+\mathcal{M}\_2 \;\text{ given }\; X\_1{=}x\_1,
+$$
+i.e., the model **already reflects** the influence of a past value at $t{=}1$. Under this conditioning, the **local** POMIS on $\mathcal{G}[V\_2]$ **does not guarantee optimality** for $Y\_2$: the reward at $t{=}2$ can still depend on the prior assignment at $t{=}1$.
 <p align="center">
-  <img src="{{ '/assets/img/example2.png' | relative_url }}" alt="causal diagrams with transition edges" width="210">
+  <img src="{{ '/assets/img/example2.png' | relative_url }}" alt="causal diagrams with transition edges" width="160">
   <em>Figure 2</em>
 </p>
+
+If we widen the view to the rolled-out window $\mathcal{G}[V\_1\!\cup\!V\_2]$, we see that **$X\_1$ is the actual POMIS handle for $Y\_2$** (it lies on the cross-time leverage toward $Y\_2$), **but it is not intervenable at $t{=}2$**.  
+This illustrates why relying only on the in-slice $\mathcal{G}[V\_2]$ can be myopic under non-stationarity and motivates using the temporal (cross-time) characterization.
 
 ## POMIS+ (temporal extension of POMIS)
 **Single slice (POMIS).**  
