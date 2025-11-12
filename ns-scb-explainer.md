@@ -59,7 +59,7 @@ Putting these together, the admissible manipulative sets for $Y\_1$ at time $t{=
 Next, suppose the agent computes **POMIS** at time $t{=}2$.  
 Given the time slice $\mathcal{G}[V\_2]$, the agent obtains the same in-slice family as at $t{=}1$:
 \\[
-\mathrm{POMIS}\_2(Y\_2) = \lbrace \varnothing, \lbrace Z\_2 \rbrace \rbrace.
+\mathrm{POMIS}\_2 = \lbrace \varnothing, \lbrace Z\_2 \rbrace \rbrace.
 \\]
 However, when the agent chooses the **empty set** at $t{=}2$, the **temporal model** it actually faces is
 $ \mathcal{M}\_2 \mid X\_1{=}x\_1$.
