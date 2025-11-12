@@ -11,6 +11,15 @@ permalink: /ns-scb-explainer/
 ## Background
 In a stationary world, the agent uses the causal diagram to pick a manipulative set and pull an arm that excludes irrelevant variables and targets the drivers of the reward. This works when the environment is fixed.
 
+<p align="center">
+  <object data="{{ '/assets/figs/s_and_ns.pdf#page=1&zoom=page-width' | relative_url }}"
+          type="application/pdf"
+          width="820" height="540">
+    <a href="{{ '/assets/figs/ns-scb-overview.pdf' | relative_url }}">Open PDF</a>
+  </object>
+</p>
+
+
 **When the world drifts.** Under non-stationarity, the same behavior becomes myopic. The reward mechanism and the information that matters can change over time, so yesterday’s optimal arm can degrade today.
 
 **What the agent is up against.** The hidden data-generating process is better described by a time-indexed SCM (i.e., temporal models) with transition edges that carry information from one time step to the next. We view non-stationarity as a reward distribution shift conditioned on the intervention history. The key question becomes: which past variables actually transmit useful information to future rewards?
