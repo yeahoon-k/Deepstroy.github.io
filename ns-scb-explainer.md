@@ -11,7 +11,7 @@ permalink: /ns-scb-explainer/
 ## Background
 In a stationary world, the agent uses the causal diagram to pick a manipulative set and pull an arm that excludes irrelevant variables and targets the drivers of the reward. This works when the environment is fixed.
 
-![Time-expanded causal diagram with transition edges]({{ "/assets/img/s_and_ns" | relative_url }})
+![]({{ "/assets/img/s_and_ns.png" | relative_url }})
 
 
 **When the world drifts.** Under non-stationarity, the same behavior becomes myopic. The reward mechanism and the information that matters can change over time, so yesterday’s optimal arm can degrade today.
