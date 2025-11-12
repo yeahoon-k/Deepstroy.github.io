@@ -83,11 +83,11 @@ To plan non-myopically toward a future reward $Y\_{t'}$ ($t' > t$), we read the 
 **Composition (definition of POMIS$^+$).**  
 For a given pair $(t,t')$, the **POMIS$^+$** is defined by the **union** of the two graphical objects:
 \\[
-\mathrm{POMIS}^{+}\_{t,t'} \;=\; \mathrm{IB}^{+}\_{t,t'}\!\big(\mathcal{G}[\!\!\bigcup\_{i=t}^{t'} V\_i],\, Y\_{t'}\big)
+\mathrm{POMIS}^{+}\_{t,t'} \;=\; \mathrm{IB}^{+}\_{t,t'}\big(\mathcal{G}[\bigcup\_{i=t}^{t'} V\_i],\, Y\_{t'}\big)
 \;\cup\;
-\mathrm{QIB}\_t\!\big(\mathcal{G}[V\_t],\, Y\_t\big).
+\mathrm{QIB}\_t\big(\mathcal{G}[V\_t],\, Y\_t\big).
 \\]
-Under the time-slice Markov assumption used in the paper, it suffices to take $t' \!=\! t{+}1$.
+Under the time-slice Markov assumption used in the paper, it suffices to take $t' = t{+}1$.
 
 **How it’s used (sequence construction).**  
 At each step $t$, we compute $\mathrm{POMIS}^{+}\_{t,t+1}$ and select an element $S\_t \in \mathrm{POMIS}^{+}\_{t,t+1}$.  
