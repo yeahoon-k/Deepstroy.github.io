@@ -31,22 +31,26 @@ P(Y\_t \mid \operatorname{do}(\mathbf{X}\_t{=}\mathbf{x}\_t), I\_{1:t-1}) \neq P
 Stationary SCM-MAB solutions are **myopic** here because they optimize $Y\_t$ in isolation and ignore cross-time information propagation.
 
 ### Example
-Under the time-slice graph $\mathcal{G}[V\_1]$, the agent first computes the **MUCT** around the current reward $Y\_1$.  
-Because both $X\_1$ and $Z\_1$ lie on upstream paths that reach $Y\_1$, the minimal upstream carrier at $t{=}1$ is $\{X\_1, Z\_1, Y\_1\}$.  
-Given this MUCT, the **in-slice interventional border (IB)** for $Y\_1$ is **empty**—there is no strictly smaller parental frontier that must be manipulated at this slice. Formally:
+#### t=1
+Under the time-slice graph $\mathcal{G}[V\_1]$, the agent first computes the **MUCT** around the current reward $Y\_1$ (i.e., $\{X\_1, Z\_1, Y\_1\}$)    
+Given this MUCT, the **in-slice interventional border (IB)** for $Y\_1$ is **empty**. Formally:
 \\[
 \operatorname{MUCT}(\mathcal{G}[V\_1],\, Y\_1)=\{X\_1,\, Z\_1,\, Y\_1\},
 \qquad
 \operatorname{IB}(\mathcal{G}[V\_1],\, Y\_1)=\varnothing.
 \\]
 
-Next, by **Proposition 4** in the paper, we examine the **predetermined** (intervened) graph $\mathcal{G}[V\_1]\_{\bar{X}\_1}$, i.e., we fix $X\_1$ and recompute the local objects.  
-Once $X\_1$ is fixed, the only variable that still forms the interventional frontier toward $Y\_1$ is $Z\_1$; the MUCT correspondingly collapses to $\{Y\_1\}$. Thus:
+Similarly, another MUCT and IB :
 \\[
 \operatorname{MUCT}(\mathcal{G}[V\_1]\_{\overline{X}\_1},\, Y\_1)=\{Y\_1\},
 \qquad
 \operatorname{IB}(\mathcal{G}[V\_1]\_{\overline{X}\_1},\, Y\_1)=\{Z\_1\}.
 \\]
+
+<p align="center">
+  <img src="{{ '/assets/img/example1.png' | relative_url }}" alt="causal diagrams with transition edges" width="600">
+  <em>Figure 2</em>
+</p>
 
 **Conclusion (POMIS at $t{=}1$).**  
 Putting these together, the admissible manipulative sets for $Y\_1$ at time $t{=}1$ are the **empty set** (no intervention needed at the current slice) and the **singleton $\{Z\_1\}$** that becomes active once $X\_1$ is predetermined. Therefore:
@@ -54,13 +58,6 @@ Putting these together, the admissible manipulative sets for $Y\_1$ at time $t{=
 \mathrm{POMIS}\_1(Y\_1)=\{\;\varnothing,\ \{Z\_1\}\;\}.
 \\]
 
-*Intuition.* Without predetermining $X\_1$, there is no compulsory parent to manipulate at slice 1 (IB is empty). After fixing $X\_1$, $Z\_1$ is the unique handle that still reaches $Y\_1$, so $\{Z\_1\}$ joins $\varnothing$ as a valid choice in $\mathrm{POMIS}\_1$.
-
-
-<p align="center">
-  <img src="{{ '/assets/img/example1.png' | relative_url }}" alt="causal diagrams with transition edges" width="600">
-  <em>Figure 2</em>
-</p>
 
 
 ## POMIS+ (temporal extension of POMIS)
