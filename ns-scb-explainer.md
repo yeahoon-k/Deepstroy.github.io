@@ -36,7 +36,7 @@ This view separates **what changes** (reward distribution shift and effective in
 ---
 
 ## POMIS+ (temporal extension of POMIS)
-**POMIS** identifies **Possibly-Optimal Manipulative Sets** for a single slice. **POMIS+** extends this idea to time by selecting a sequence
+**POMIS** identifies **Possibly-Optimal Minimal Intervention Sets** for a single slice. **POMIS$^+$** extends this idea to time by selecting a sequence
 $$
 (\mathbf{X}_{t_1},\ \mathbf{X}_{t_2},\ \dots,\ \mathbf{X}_{t_k})
 $$
