@@ -12,7 +12,7 @@ permalink: /ns-scb-explainer/
 In a stationary world, the agent uses the causal diagram to pick a manipulative set and pull an arm that excludes irrelevant variables and targets the drivers of the reward. This works when the environment is fixed.
 
 <p align="center">
-  <img src="{{ '/assets/img/s_and_ns.png' | relative_url }}" alt="causal diagrams with transition edges" width="720">
+  <img src="{{ '/assets/img/s_and_ns1.png' | relative_url }}" alt="causal diagrams with transition edges" width="720">
 </p>
 
 
