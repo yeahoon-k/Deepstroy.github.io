@@ -34,7 +34,7 @@ Stationary SCM-MAB solutions are **myopic** here because they optimize $Y\_t$ in
 Under the time-slice graph $\mathcal{G}[V\_1]$, the agent first computes the **MUCT** around the current reward $Y\_1$ (i.e., $\{X\_1, Z\_1, Y\_1\}$)    
 Given this MUCT, the **in-slice interventional border (IB)** for $Y\_1$ is **empty**. Formally:
 \\[
-\operatorname{MUCT}(\mathcal{G}[V\_1],\, Y\_1)=\{X\_1,\, Z\_1,\, Y\_1\},
+\operatorname{MUCT}(\mathcal{G}[V\_1],\, Y\_1)=\lbrace X\_1,\, Z\_1,\, Y\_1 \rbrace,
 \qquad
 \operatorname{IB}(\mathcal{G}[V\_1],\, Y\_1)=\varnothing.
 \\]
@@ -51,13 +51,16 @@ Similarly, another MUCT and IB :
   <em>Figure 2</em>
 </p>
 
-**Conclusion (POMIS at $t{=}1$).**  
 Putting these together, the admissible manipulative sets for $Y\_1$ at time $t{=}1$ are the **empty set** (no intervention needed at the current slice) and the **singleton $\{Z\_1\}$** that becomes active once $X\_1$ is predetermined. Therefore:
 \\[
-\mathrm{POMIS}\_1(Y\_1)=\lbrace \varnothing, \lbrace Z\_1 \rbrace \rbrace
+\mathrm{POMIS}\_1=\lbrace \varnothing, \lbrace Z\_1 \rbrace \rbrace
 \\]
 
-
+**However**, 
+<p align="center">
+  <img src="{{ '/assets/img/example2.png' | relative_url }}" alt="causal diagrams with transition edges" width="300">
+  <em>Figure 2</em>
+</p>
 
 ## POMIS+ (temporal extension of POMIS)
 **Single slice (POMIS).**  
