@@ -39,6 +39,11 @@ footer:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  math_engine_opts: {}
+  
 sass:
     style: :compressed
 plugins:
@@ -59,3 +64,5 @@ exclude:
 
 # Used for defeating caching
 version: 1
+
+
