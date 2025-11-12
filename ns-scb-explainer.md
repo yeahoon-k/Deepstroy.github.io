@@ -54,7 +54,7 @@ Similarly, another MUCT and IB :
 **Conclusion (POMIS at $t{=}1$).**  
 Putting these together, the admissible manipulative sets for $Y\_1$ at time $t{=}1$ are the **empty set** (no intervention needed at the current slice) and the **singleton $\{Z\_1\}$** that becomes active once $X\_1$ is predetermined. Therefore:
 \\[
-\mathrm{POMIS}\_1(Y\_1)=\{\;\varnothing,\ \{Z\_1\}\;\}.
+\mathrm{POMIS}\_1(Y\_1)=\left\{\,\varnothing,\, \{Z\_1\}\,\right\}
 \\]
 
 
