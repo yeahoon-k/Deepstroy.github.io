@@ -31,7 +31,6 @@ P(Y\_t \mid \operatorname{do}(\mathbf{X}\_t{=}\mathbf{x}\_t), I\_{1:t-1}) \neq P
 Stationary SCM-MAB solutions are **myopic** here because they optimize $Y\_t$ in isolation and ignore cross-time information propagation.
 
 ### Example
-#### t=1
 Under the time-slice graph $\mathcal{G}[V\_1]$, the agent first computes the **MUCT** around the current reward $Y\_1$ (i.e., $\{X\_1, Z\_1, Y\_1\}$)    
 Given this MUCT, the **in-slice interventional border (IB)** for $Y\_1$ is **empty**. Formally:
 \\[
@@ -61,34 +60,35 @@ Putting these together, the admissible manipulative sets for $Y\_1$ at time $t{=
 
 
 ## POMIS+ (temporal extension of POMIS)
-**POMIS** identifies **Possibly-Optimal Minimal Intervention Sets** for a single slice. POMIS$^+$ extends this idea to time by selecting a sequence
-$(\mathbf{X}\_{t\_1},\ \mathbf{X}\_{t_2},\ \dots,\ \mathbf{X}\_{t\_k})$
-such that intervening on these sets at selected steps yields high expected future reward $ \mathbb{E}[Y\_{t'}] $ for target times $ t'\ge t\_k $.  
-Importantly, $ \mathbf{X}\_t $ may include variables irrelevant to $Y\_t$ but crucial for $Y\_{t'}$ via transition edges.
+**Single slice (POMIS).**  
+At time $t$, we work on the in-slice graph $\mathcal{G}[V\_t]$ for the current reward $Y\_t$.  
+We compute the in-slice interventional border $\operatorname{IB}(\mathcal{G}[V\_t], Y\_t)$ (and, when required by the propositions, its value under predetermined graphs like $\mathcal{G}[V\_t]\_{\bar{X}\_t}$).  
+The resulting **POMIS** at slice $t$ is the family of admissible manipulative sets for $Y\_t$ determined by these IB computations (e.g., in our example: $\{\varnothing, \{Z\_1\}\}$).
 
+**Cross-time objects (IB$^+$ and QIB).**  
+To plan non-myopically toward a future reward $Y\_{t'}$ ($t' \!>\! t$), we read the temporal models on the time-expanded diagram:
+- **IB$^+$ at $t$ toward $t'$** selects the **time-$t$ variables that still have leverage on $Y\_{t'}$ through transition edges** in the rolled-out window. We denote this set by $\mathrm{IB}^{+}\_{t,t'}$.
+- **QIB at $t$** keeps the **current-time handles that remain interventional borders for $Y\_t$** (under the qualification conditions in the paper). We denote this set by $\mathrm{QIB}\_t$.
 
-## IB$^+$ and QIB (graphical characterization)
-To characterize non-myopic interventions on the time-expanded graph:
+**Composition (definition of POMIS$^+$).**  
+For a given pair $(t,t')$, the **POMIS$^+$** is defined by the **union** of the two graphical objects:
+$$
+\mathrm{POMIS}^{+}\_{t,t'} \;=\; \mathrm{IB}^{+}\_{t,t'}\!\big(\mathcal{G}[\!\!\bigcup\_{i=t}^{t'} V\_i],\, Y\_{t'}\big)
+\;\cup\;
+\mathrm{QIB}\_t\!\big(\mathcal{G}[V\_t],\, Y\_t\big).
+$$
+Under the time-slice Markov assumption used in the paper, it suffices to take $t' \!=\! t{+}1$.
 
-1. **IB$^+$ (Interventional Border for Subsequent Time Steps).**  
-   A graphical frontier that gathers candidates in $ \mathbf{V}\_t $ whose manipulation can still **alter information propagation** toward $Y\_{t'}$.
+**How it’s used (sequence construction).**  
+At each step $t$, we compute $\mathrm{POMIS}^{+}\_{t,t+1}$ and select an element $S\_t \in \mathrm{POMIS}^{+}\_{t,t+1}$.  
+The overall **intervention sequence** is then $(S\_1, S\_2, \dots)$, where each $S\_t$ is **exactly** drawn from the union $\mathrm{IB}^{+}\_{t,t+1} \cup \mathrm{QIB}\_t$—not an arbitrary set and **not** based on “including variables irrelevant to $Y\_t$” unless they are admitted by the union above.  
+This is precisely the mechanism we formalized to align current-time leverage with future-time leverage under non-stationarity.
 
-2. **QIB (Qualified Interventional Border).**  
-   A refinement of IB$^+$ that filters out nodes whose manipulation would be redundant given the temporal model (e.g., blocked by mediators or confounders). QIB retains only candidates that can change the distribution of ancestors of $Y\_{t'}$ that matter.
-
-The **POMIS$^+$ for $(t,t')$** is obtained by the **union**
-\\[
-\mathrm{POMIS}^{+}\_{t,t'} \;=\; \mathrm{IB}^{+}\_{t,t'}\big(G[\!\bigcup\_{i=t}^{t'} V\_i], Y\_{t'}\big)\; \cup\; \mathrm{QIB}\_t\big(G[V\_t], Y\_t\big).
-\\]
-Under the time-slice Markov assumption, it suffices to take $t'=t+1$ (i.e., look only one step ahead).
-
+---
 ## Why stationary solutions fail
 In a **stationary SCM-MAB**, the optimal arm for $Y_t$ is chosen under a fixed reward mechanism. Under **reward distribution shift** or altered **information propagation**, a myopic choice may:
 - under-exploit **transition edges** that create leverage on $Y_{t'}$,
 - over-explore variables with **no lasting effect**,
-- or assume **forced stationarity**, leading to suboptimal long-run reward.
-
----
 
 ## What we demonstrate
 - A causal formalization of **NS-SCM-MAB** with precise **reward distribution shift** and **temporal model** semantics.  
