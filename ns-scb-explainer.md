@@ -66,18 +66,17 @@ $ \mathcal{M}\_2 \mid X\_1{=}x\_1$.
 The model **reflects** the influence of a past value at $t{=}1$. Under this conditioning, the **local** POMIS on $\mathcal{G}[V\_2]$ **does not guarantee optimality** for $Y\_2$: the reward at $t{=}2$ can still depend on the prior assignment at $t{=}1$.
 <p align="center">
   <img src="{{ '/assets/img/example2.png' | relative_url }}" alt="causal diagrams with transition edges" width="160">
-  <em>Figure 3</em>
+  <br><em>Figure 3</em>
 </p>
 
-If we widen the view to the rolled-out window $\mathcal{G}[V\_1\!\cup\!V\_2]$, we see that **$X\_1$ is the actual POMIS handle for $Y\_2$**, **but it is not intervenable at $t{=}2$**.  
-This illustrates why relying only on the in-slice $\mathcal{G}[V\_2]$ can be myopic under non-stationarity and motivates using the temporal (cross-time) characterization.
+If we widen the view to the rolled-out window $\mathcal{G}[V\_1 \cup V\_2]$, we see that **$X\_1$ is the actual POMIS handle for $Y\_2$**, **but it is not intervenable at $t{=}2$**. This illustrates why relying only on the in-slice $\mathcal{G}[V\_2]$ can be myopic under non-stationarity and motivates using the temporal (cross-time) characterization.
 
 ## POMIS+ (temporal extension of POMIS)
 **Single slice (POMIS).**  
 At time $t$, we work on the in-slice graph $\mathcal{G}[V\_t]$ for the current reward $Y\_t$. We compute the in-slice interventional border $\operatorname{IB}(\mathcal{G}[V\_t], Y\_t)$. The resulting **POMIS** at slice $t$ is the family of admissible manipulative sets for $Y\_t$ determined by these IB computations.
 
 **Cross-time objects (IB$^+$ and QIB).**  
-To plan non-myopically toward a future reward $Y\_{t'}$ ($t' \!>\! t$), we read the temporal models on the time-expanded diagram:
+To plan non-myopically toward a future reward $Y\_{t'}$ ($t' > t$), we read the temporal models on the time-expanded diagram:
 - **IB$^+$ at $t$ toward $t'$** selects the **time-$t$ variables that still have leverage on $Y\_{t'}$ through transition edges** in the rolled-out window. We denote this set by $\mathrm{IB}^{+}\_{t,t'}$.
 - **QIB at $t$** keeps the **current-time handles that remain interventional borders for $Y\_t$** (under the qualification conditions in the paper). We denote this set by $\mathrm{QIB}\_t$.
 
