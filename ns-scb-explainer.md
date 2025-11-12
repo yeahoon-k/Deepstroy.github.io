@@ -58,14 +58,12 @@ Putting these together, the admissible manipulative sets for $Y\_1$ at time $t{=
 
 Next, suppose the agent computes **POMIS** at time $t{=}2$.  
 Given the time slice $\mathcal{G}[V\_2]$, the agent obtains the same in-slice family as at $t{=}1$:
-$$
+\\[
 \mathrm{POMIS}\_2(Y\_2)\;=\;\lbrace\;\varnothing,\;\{Z\_2\}\;\right\rbrace.
-$$
-However, if the agent chooses the **empty set** (no intervention) at $t{=}2$, the **temporal model** it actually faces is
-$$
-\mathcal{M}\_2 \;\text{ given }\; X\_1{=}x\_1,
-$$
-i.e., the model **already reflects** the influence of a past value at $t{=}1$. Under this conditioning, the **local** POMIS on $\mathcal{G}[V\_2]$ **does not guarantee optimality** for $Y\_2$: the reward at $t{=}2$ can still depend on the prior assignment at $t{=}1$.
+\\]
+However, when the agent chooses the **empty set** at $t{=}2$, the **temporal model** it actually faces is
+$ \mathcal{M}\_2 \;\text{ given }\; X\_1{=}x\_1$.
+The model **reflects** the influence of a past value at $t{=}1$. Under this conditioning, the **local** POMIS on $\mathcal{G}[V\_2]$ **does not guarantee optimality** for $Y\_2$: the reward at $t{=}2$ can still depend on the prior assignment at $t{=}1$.
 <p align="center">
   <img src="{{ '/assets/img/example2.png' | relative_url }}" alt="causal diagrams with transition edges" width="160">
   <em>Figure 3</em>
