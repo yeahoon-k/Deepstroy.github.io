@@ -33,7 +33,6 @@ We reason with **temporal models** $ \mathcal{M}_t $ that respect cross-time dep
 
 This view separates **what changes** (reward distribution shift and effective information flow) from **what remains stable**, enabling **structure-aware** action selection.
 
----
 
 ## POMIS+ (temporal extension of POMIS)
 **POMIS** identifies **Possibly-Optimal Minimal Intervention Sets** for a single slice. **POMIS$^+$** extends this idea to time by selecting a sequence
@@ -43,20 +42,17 @@ $$
 such that intervening on these sets at selected steps yields high expected future reward $ \mathbb{E}[Y_{t'}] $ for target times $ t'\ge t_k $.  
 Importantly, $ \mathbf{X}_t $ may include variables **irrelevant to $Y_t$** but **crucial for $Y_{t'}$** via **transition edges**.
 
----
 
-## IB+ and QIB (graphical characterization)
+## IB$^+$ and QIB (graphical characterization)
 To characterize non-myopic interventions on the time-expanded graph:
 
-1. **IB+ (Interventional Border for Subsequent Time Steps).**  
+1. **IB$^+$ (Interventional Border for Subsequent Time Steps).**  
    A graphical frontier that gathers candidates in $ \mathbf{V}_t $ whose manipulation can still **alter information propagation** toward $Y_{t'}$.
 
 2. **QIB (Qualified Interventional Border).**  
    A refinement of IB+ that filters out nodes whose manipulation would be redundant given the temporal model (e.g., blocked by **mediators** or **confounders**). QIB retains only candidates that can **change the distribution of ancestors of $Y_{t'}$** that matter.
 
-**POMIS+** is obtained by assembling **QIB-validated** subsets across time that maximize (or approximately maximize) the expected future reward under the **do-operator**.
-
----
+**POMIS$^+$** is obtained by assembling **QIB-validated** subsets across time that maximize (or approximately maximize) the expected future reward under the **do-operator**.
 
 ## Why stationary solutions fail
 In a **stationary SCM-MAB**, the optimal arm for $Y_t$ is chosen under a fixed reward mechanism. Under **reward distribution shift** or altered **information propagation**, a myopic choice may:
@@ -66,28 +62,12 @@ In a **stationary SCM-MAB**, the optimal arm for $Y_t$ is chosen under a fixed r
 
 ---
 
-## Algorithmic recipe (POMIS+ sequences)
-**Input.** Time-expanded causal diagram; target horizon(s); candidate manipulative sets per slice.
-
-**Procedure.**
-1. For each $t$, construct the **temporal model** $ \mathcal{M}_t $ and expose **transition edges** to slices $>t$.
-2. Compute **IB+** around $t$ toward the target reward $Y_{t'}$.
-3. Prune to **QIB** using temporal ancestors/mediators/confounders of $Y_{t'}$.
-4. Choose a **POMIS+** set $ \mathbf{X}_t \subseteq \mathrm{QIB}_t $.
-5. Repeat across time steps to obtain a **POMIS+ intervention sequence**.
-6. Execute the sequence; track **reward distribution shift** via observed $Y_t$ under $ \operatorname{do}(\mathbf{X}_t) $.
-
-This focuses exploration on variables whose effects **persist through time**.
-
----
-
 ## What we demonstrate
 - A causal formalization of **NS-SCM-MAB** with precise **reward distribution shift** and **temporal model** semantics.  
 - A **graphical characterization** for non-myopic intervention design using **IB+** and **QIB**.  
 - A constructive method to build **POMIS+ intervention sequences** that exploit **information propagation**.  
 - **Experiments** showing improved **cumulative regret** and higher **optimal-action probability** versus stationary or naive baselines under non-stationarity.
 
----
 
 ## Paper/resources
 - Paper PDF: [link](https://openreview.net/pdf?id=F4LhOqhxkk)
