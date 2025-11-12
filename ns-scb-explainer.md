@@ -59,7 +59,7 @@ Putting these together, the admissible manipulative sets for $Y\_1$ at time $t{=
 Next, suppose the agent computes **POMIS** at time $t{=}2$.  
 Given the time slice $\mathcal{G}[V\_2]$, the agent obtains the same in-slice family as at $t{=}1$:
 \\[
-\mathrm{POMIS}\_2(Y\_2) = \lbrace \varnothing, \lbraceZ\_2\rbrace \rbrace.
+\mathrm{POMIS}\_2(Y\_2) = \lbrace \varnothing, \lbrace Z\_2 \rbrace \rbrace.
 \\]
 However, when the agent chooses the **empty set** at $t{=}2$, the **temporal model** it actually faces is
 $ \mathcal{M}\_2 \;\text{ given }\; X\_1{=}x\_1$.
@@ -74,9 +74,7 @@ This illustrates why relying only on the in-slice $\mathcal{G}[V\_2]$ can be myo
 
 ## POMIS+ (temporal extension of POMIS)
 **Single slice (POMIS).**  
-At time $t$, we work on the in-slice graph $\mathcal{G}[V\_t]$ for the current reward $Y\_t$.  
-We compute the in-slice interventional border $\operatorname{IB}(\mathcal{G}[V\_t], Y\_t)$ (and, when required by the propositions, its value under predetermined graphs like $\mathcal{G}[V\_t]\_{\bar{X}\_t}$).  
-The resulting **POMIS** at slice $t$ is the family of admissible manipulative sets for $Y\_t$ determined by these IB computations (e.g., in our example: $\{\varnothing, \{Z\_1\}\}$).
+At time $t$, we work on the in-slice graph $\mathcal{G}[V\_t]$ for the current reward $Y\_t$. We compute the in-slice interventional border $\operatorname{IB}(\mathcal{G}[V\_t], Y\_t)$. The resulting **POMIS** at slice $t$ is the family of admissible manipulative sets for $Y\_t$ determined by these IB computations.
 
 **Cross-time objects (IB$^+$ and QIB).**  
 To plan non-myopically toward a future reward $Y\_{t'}$ ($t' \!>\! t$), we read the temporal models on the time-expanded diagram:
