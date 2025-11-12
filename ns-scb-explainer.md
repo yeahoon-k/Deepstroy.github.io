@@ -9,12 +9,13 @@ permalink: /ns-scb-explainer/
 ---
 
 ## Background
-## Background
-Classical **SCM-MAB** (e.g., *Structural Causal Bandit*, 2018) uses a causal diagram to decide which **manipulative set** $\mathbf{X}$ to intervene on so that the agent can maximize $\mathbb{E}[Y \mid \operatorname{do}(\mathbf{X}{=}\mathbf{x})]$ while avoiding irrelevant variables. This stationary view is effective when the reward mechanism and information flow are fixed, but it is **myopic** when the environment changes: during sequential decision making, the **reward distribution** can drift, and past variables can keep influencing future rewards.
+In a stationary world, the agent uses the causal diagram to pick a manipulative set and pull an arm that excludes irrelevant variables and targets the drivers of the reward. This works when the environment is fixed.
 
-We therefore formulate **non-stationary structural causal bandits** by rolling out a **time-indexed SCM** and making cross-time **information propagation** explicit via **transition edges**. We define **non-stationarity** as a **reward distribution shift** conditioned on the intervention history $I_{1:t-1}$, and we analyze which parts of the temporal model actually transmit information to $Y_{t'}$ for $t'>t$. This view separates **what changes** (reward distribution and effective information flow) from **what remains stable**, providing a causal basis for action selection under shift.
+**When the world drifts.** Under non-stationarity, the same behavior becomes **myopic**. The reward mechanism and the information that matters can change over time, so yesterday’s optimal arm can degrade today.
 
-On top of this temporal formulation, we introduce **POMIS$^{+}$**—a time-aware extension of POMIS—together with two graphical notions, **IB$^{+}$** and **QIB**, to construct **intervention sequences** that remain effective for future rewards. Intuitively, an intervention set $\mathbf{X}_t$ may include variables that are **irrelevant to $Y_t$** but **crucial for $Y_{t'}$** because of transition edges. This non-myopic design yields lower **cumulative regret** and higher probability of selecting the **optimal arm** under **reward distribution shifts**.
+**What the agent is up against.** The hidden data-generating process is better described by a time-indexed SCM (i.e., temporal models) with transition edges that carry information from one time step to the next. We view non-stationarity as a **reward distribution shift** conditioned on the intervention history. The key question becomes: **which past variables actually transmit useful information to future rewards?**
+
+**How the agent should act.** We reason in temporal models on a time-expanded causal diagram to separate what changes (reward distribution and effective information flow) from what remains stable. On this basis, we introduce **POMIS$^+$**—a time-aware extension of POMIS—together with two graphical concepts IB$^+$ and QIB to design non-myopic intervention sequences. Concretely, the agent may intervene on variables that are irrelevant to the current reward but crucial for a future reward via transition edges. This structure-aware strategy yields lower cumulative regret under **reward distribution shifts**.
 
 
 ## Problem setting (NS-SCM-MAB)
