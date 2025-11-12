@@ -44,9 +44,9 @@ Next, by **Proposition 4** in the paper, we examine the **predetermined** (inter
 \( \mathcal{G}[V\_1]\_{\bar{X}\_1} \), i.e., we fix \(X\_1\) and recompute the local objects.  
 Once \(X\_1\) is fixed, the only variable that still forms the interventional frontier toward \(Y\_1\) is \(Z\_1\); the MUCT correspondingly collapses to \(\{Y\_1\}\). Thus:
 \\[
-\operatorname{MUCT}(\mathcal{G}[V\_1]\_{\bar{X}\_1},\, Y\_1)=\{Y\_1\},
+\operatorname{MUCT}(\mathcal{G}[V\_1]\_{\overline{X}\_1},\, Y\_1)=\{Y\_1\},
 \qquad
-\operatorname{IB}(\mathcal{G}[V\_1]\_{\bar{X}\_1},\, Y\_1)=\{Z\_1\}.
+\operatorname{IB}(\mathcal{G}[V\_1]\_{\overline{X}\_1},\, Y\_1)=\{Z\_1\}.
 \\]
 
 **Conclusion (POMIS at \(t{=}1\)).**  
