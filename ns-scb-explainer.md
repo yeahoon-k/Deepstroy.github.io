@@ -11,11 +11,11 @@ permalink: /ns-scb-explainer/
 ## Background
 In a stationary world, the agent uses the causal diagram to pick a manipulative set and pull an arm that excludes irrelevant variables and targets the drivers of the reward. This works when the environment is fixed.
 
-**When the world drifts.** Under non-stationarity, the same behavior becomes **myopic**. The reward mechanism and the information that matters can change over time, so yesterday’s optimal arm can degrade today.
+**When the world drifts.** Under non-stationarity, the same behavior becomes myopic. The reward mechanism and the information that matters can change over time, so yesterday’s optimal arm can degrade today.
 
-**What the agent is up against.** The hidden data-generating process is better described by a time-indexed SCM (i.e., temporal models) with transition edges that carry information from one time step to the next. We view non-stationarity as a **reward distribution shift** conditioned on the intervention history. The key question becomes: **which past variables actually transmit useful information to future rewards?**
+**What the agent is up against.** The hidden data-generating process is better described by a time-indexed SCM (i.e., temporal models) with transition edges that carry information from one time step to the next. We view non-stationarity as a reward distribution shift conditioned on the intervention history. The key question becomes: which past variables actually transmit useful information to future rewards?
 
-**How the agent should act.** We reason in temporal models on a time-expanded causal diagram to separate what changes (reward distribution and effective information flow) from what remains stable. On this basis, we introduce **POMIS$^+$**—a time-aware extension of POMIS—together with two graphical concepts IB$^+$ and QIB to design non-myopic intervention sequences. Concretely, the agent may intervene on variables that are irrelevant to the current reward but crucial for a future reward via transition edges. This structure-aware strategy yields lower cumulative regret under **reward distribution shifts**.
+**How the agent should act.** We reason in temporal models on a time-expanded causal diagram to separate what changes (reward distribution and effective information flow) from what remains stable. On this basis, we introduce POMIS$^+$—a time-aware extension of POMIS—together with two graphical concepts IB$^+$ and QIB to design non-myopic intervention sequences. Concretely, the agent may intervene on variables that are irrelevant to the current reward but crucial for a future reward via transition edges. This structure-aware strategy yields lower cumulative regret under reward distribution shifts.
 
 
 ## Problem setting (NS-SCM-MAB)
@@ -96,5 +96,5 @@ This focuses exploration on variables whose effects **persist through time**.
 ---
 
 ## Paper/resources
-- Paper PDF: [OpenReview](https://openreview.net/pdf?id=F4LhOqhxkk)
-- Code: [GitHub](https://github.com/yeahoon-k/NS-SCMMAB)
+- Paper PDF: [link](https://openreview.net/pdf?id=F4LhOqhxkk)
+- Code: [link](https://github.com/yeahoon-k/NS-SCMMAB)
